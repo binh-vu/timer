@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "timer4u"
+version = "1.0.0"
+description = "Timing Python code made easy"
+authors = ["Binh Vu <binh@toan2.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "timer" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
