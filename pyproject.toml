@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "timer4u"
+name = "timer4"
 version = "1.0.0"
 description = "Timing Python code made easy"
 authors = ["Binh Vu <binh@toan2.com>"]

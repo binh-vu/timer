@@ -1,11 +1,11 @@
-# timer ![PyPI](https://img.shields.io/pypi/v/timer4u) ![Python](https://img.shields.io/badge/python-v3.7+-blue.svg)
+# timer ![PyPI](https://img.shields.io/pypi/v/timer4) ![Python](https://img.shields.io/badge/python-v3.7+-blue.svg)
 
 `timer` is a library to time your Python code.
 
 ## Installation
 
 ```bash
-pip install timer4u  # not timer
+pip install timer4  # not timer
 ```
 
 ## Usage
