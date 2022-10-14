@@ -13,12 +13,13 @@ pip install timer4u  # not timer
 - `timer` uses `with` statement to watch how long your code running:
 
 ```python
+import time
 from timer import Timer
 
 
 with Timer().watch_and_report(msg='test'):
     # running code that do lots of computation
-    ...
+    time.sleep(1.0)
 
 # when the code reach this part, it will output the message and the time it tooks.
 # for example:
@@ -28,19 +29,21 @@ with Timer().watch_and_report(msg='test'):
 - If you don't want to report the result immediately, use the `watch` method instead. Whenever you've done, call `report`.
 
 ```python
+import time
 from timer import Timer
 
 # you can either create a timer variable first, or use Timer.get_instance()
 # that will return a singleton variable.
 
 total = 0
-for item in range(1000):
+for item in range(7):
     # only measure the part that we want
     with Timer.get_instance().watch("sum of square"):
         total += item ** 2
+        time.sleep(0.2)
 
     # doing other things that we don't want to measure
-    ...
+    time.sleep(0.8)
 
 Timer.get_instance().report()
 ```
