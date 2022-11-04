@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "timer4"
-version = "1.0.1"
+version = "1.0.2"
 description = "Timing Python code made easy"
 authors = ["Binh Vu <binh@toan2.com>"]
 license = "MIT"
