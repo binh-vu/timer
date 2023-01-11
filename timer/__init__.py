@@ -20,7 +20,7 @@ class Timer:
     instance = None
 
     def __init__(self):
-        self.categories = {}
+        self.categories: dict[str, float] = {}
 
     @staticmethod
     def get_instance():
@@ -115,3 +115,16 @@ class Timer:
 
     def get_time(self, name: str = "default"):
         return self.categories[name]
+
+    def merge(self, timer: "Timer"):
+        """Merge the results of another timer into this one. This is useful when we have multiple tasks running
+        in parallel so we can run multiple timer instance and merge the results at the end.
+        
+        Note: this function mutate the timer!
+        """
+        for k, v in timer.categories.items():
+            if k not in self.categories:
+                self.categories[k] = v
+            else:
+                self.categories[k] += v
+        return self
