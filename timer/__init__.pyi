@@ -18,10 +18,13 @@ class Timer:
         self,
         msg: str,
         print_fn=None,
+        preprint: bool = False,
         precision: int = 3,
         append_to_file: Union[None, str, Path] = None,
-    ): ...
-
+        disable: bool = False,
+    ): 
+        ...
+        
     def start(self, name: str = "default") -> TimerCount: ...
 
     def report(
@@ -35,4 +38,12 @@ class Timer:
 
     def merge(self, timer: Timer): ...
 
-    
+def watch_and_report(
+    msg: str,
+    print_fn=None,
+    preprint: bool = False,
+    precision: int = 3,
+    append_to_file: Union[None, str, Path] = None,
+    disable: bool = False,
+): 
+    ...
