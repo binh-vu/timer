@@ -12,8 +12,8 @@ class TimerCount:
         self.start = time.time()
 
     def stop(self):
-        self.end = time.time() - self.start
-        self.timer.categories[self.name] += self.end 
+        self.end = time.time()
+        self.timer.categories[self.name] += self.end - self.start
         return self.timer
 
 
